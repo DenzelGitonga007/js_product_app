@@ -49,7 +49,19 @@ const productRoutes = require('./routes/product_routes');
 // If someone visits /product_app/products → send them to productRoutes
 // e.g. GET http://localhost:5000/product_app/products → get all products
 //      POST http://localhost:5000/product_app/products → create a product
-app.use('/product_app/products', productRoutes);
+
+app.use('/product_app/products', productRoutes); // register the products routes
+
+// User routes
+const userRoutes = require("./routes/user_routes");
+app.use("/product_app/users", userRoutes); // user routes
+
+
+// Example endpoints or urls:
+
+// http://localhost:5000/product_app/users/signup
+
+// http://localhost:5000/product_app/users/login
 
 
 // =====================
